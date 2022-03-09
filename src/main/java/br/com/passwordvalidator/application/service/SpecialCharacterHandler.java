@@ -1,6 +1,5 @@
 package br.com.passwordvalidator.application.service;
 
-import br.com.passwordvalidator.domain.PasswordRequest;
 import lombok.AllArgsConstructor;
 
 import java.util.Set;
@@ -11,8 +10,8 @@ class SpecialCharacterHandler extends AbstractPasswordValidationHandler {
     private static final Set<Character> SPECIAL_CHARACTERS = Set.of('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+');
 
     @Override
-    public void execute(final PasswordRequest passwordRequest) {
-        passwordRequest.setValid(hasSpecialCharacter(passwordRequest.getPassword()));
+    public void execute(final PasswordParams passwordParams) {
+        passwordParams.setValid(hasSpecialCharacter(passwordParams.getPassword()));
     }
 
     private boolean hasSpecialCharacter(final String password) {

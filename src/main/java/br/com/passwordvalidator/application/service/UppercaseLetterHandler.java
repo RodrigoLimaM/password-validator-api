@@ -1,14 +1,13 @@
 package br.com.passwordvalidator.application.service;
 
-import br.com.passwordvalidator.domain.PasswordRequest;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 class UppercaseLetterHandler extends AbstractPasswordValidationHandler {
 
     @Override
-    public void execute(final PasswordRequest passwordRequest) {
-        passwordRequest.setValid(hasUppercaseLetter(passwordRequest.getPassword()));
+    public void execute(final PasswordParams passwordParams) {
+        passwordParams.setValid(hasUppercaseLetter(passwordParams.getPassword()));
     }
 
     private boolean hasUppercaseLetter(final String password) {

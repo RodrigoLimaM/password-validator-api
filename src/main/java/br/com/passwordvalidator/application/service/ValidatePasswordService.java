@@ -1,7 +1,6 @@
 package br.com.passwordvalidator.application.service;
 
 import br.com.passwordvalidator.application.port.in.ValidatePasswordUseCase;
-import br.com.passwordvalidator.domain.PasswordRequest;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,6 +20,6 @@ class ValidatePasswordService implements ValidatePasswordUseCase {
 
     @Override
     public boolean validatePassword(final String password) {
-        return abstractPasswordValidationHandler.handle(PasswordRequest.of(password));
+        return abstractPasswordValidationHandler.handle(PasswordParams.of(password));
     }
 }

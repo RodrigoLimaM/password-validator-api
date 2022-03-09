@@ -1,17 +1,16 @@
 package br.com.passwordvalidator.application.service;
 
-import br.com.passwordvalidator.domain.PasswordRequest;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 class RepeatedCharacterHandler extends AbstractPasswordValidationHandler {
 
     @Override
-    public void execute(final PasswordRequest passwordRequest) {
-        passwordRequest.setValid(hasNotRepeatedCharacter(passwordRequest.getPassword()));
+    public void execute(final PasswordParams passwordParams) {
+        passwordParams.setValid(hasNoRepeatedCharacter(passwordParams.getPassword()));
     }
 
-    private boolean hasNotRepeatedCharacter(final String password) {
+    private boolean hasNoRepeatedCharacter(final String password) {
         return password.length() == password.chars()
                 .distinct()
                 .count();

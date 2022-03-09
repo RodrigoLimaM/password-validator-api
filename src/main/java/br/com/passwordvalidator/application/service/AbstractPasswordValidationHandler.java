@@ -1,7 +1,5 @@
 package br.com.passwordvalidator.application.service;
 
-import br.com.passwordvalidator.domain.PasswordRequest;
-
 import java.util.function.IntPredicate;
 
 abstract class AbstractPasswordValidationHandler {
@@ -13,13 +11,13 @@ abstract class AbstractPasswordValidationHandler {
         return next;
     }
 
-    abstract void execute(final PasswordRequest passwordRequest);
+    abstract void execute(final PasswordParams passwordParams);
 
-    boolean handle(final PasswordRequest passwordRequest) {
-        this.execute(passwordRequest);
-        if(passwordRequest.isValid() && next != null)
-            return next.handle(passwordRequest);
-        return passwordRequest.isValid();
+    boolean handle(final PasswordParams passwordParams) {
+        this.execute(passwordParams);
+        if(passwordParams.isValid() && next != null)
+            return next.handle(passwordParams);
+        return passwordParams.isValid();
     }
 
     boolean hasSomeConditionOnCharacters(final String password, final IntPredicate condition) {

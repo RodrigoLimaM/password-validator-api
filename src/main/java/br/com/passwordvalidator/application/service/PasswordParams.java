@@ -1,4 +1,4 @@
-package br.com.passwordvalidator.domain;
+package br.com.passwordvalidator.application.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,14 +6,14 @@ import lombok.Setter;
 
 @AllArgsConstructor
 @Getter
-public class PasswordRequest {
+class PasswordParams {
 
     private final String password;
 
     @Setter
     private boolean isValid;
 
-    public static PasswordRequest of(final String password) {
-        return new PasswordRequest(password, false);
+    public static PasswordParams of(final String password) {
+        return new PasswordParams(password, false);
     }
 }
