@@ -40,12 +40,21 @@ Observação: é recomendado que os caracteres especiais sejam passados em sua v
 
    `password={String}`
 
-* **Exemplo de resposta:**
+* **Exemplos de resposta:**
 
     * **Code:** 200 OK <br />
       **Content:**
    ```json
    true
+   ```
+
+  * **Code:** 400 Bad Request <br />
+    **Content:**
+   ```json
+   {
+       "status": 400,
+       "details": "Required request parameter 'password' for method parameter type String is not present"
+   }
    ```
   
 ---
