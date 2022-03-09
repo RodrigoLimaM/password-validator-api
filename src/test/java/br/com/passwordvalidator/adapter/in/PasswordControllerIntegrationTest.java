@@ -21,9 +21,6 @@ class PasswordControllerIntegrationTest {
     @Autowired
     WebApplicationContext webApplicationContext;
 
-    @Autowired
-    ObjectMapper objectMapper;
-
     private MockMvc mockMvc;
 
     @PostConstruct

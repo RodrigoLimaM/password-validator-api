@@ -4,6 +4,7 @@ API para validações de senha. Para ser considerada uma senha válida, deve ate
 * 9 ou mais caracteres;
 * Ao menos 1 dígito;
 * Ao menos 1 letra minúscula;
+* Ao menos 1 letra maiúscula;
 * Ao menos 1 caractere especial (!@#$%^&*()-+);
 * Não possuir caracteres repetidos dentro do conjunto;
 * Não possuir espaços em branco.

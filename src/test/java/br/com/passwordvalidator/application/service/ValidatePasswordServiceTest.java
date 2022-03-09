@@ -10,7 +10,6 @@ class ValidatePasswordServiceTest {
 
     private final ValidatePasswordService validatePasswordService;
 
-
     ValidatePasswordServiceTest() {
         this.validatePasswordService = new ValidatePasswordService();
     }
