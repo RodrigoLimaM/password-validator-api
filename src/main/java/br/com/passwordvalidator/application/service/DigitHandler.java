@@ -7,9 +7,8 @@ import lombok.AllArgsConstructor;
 class DigitHandler extends AbstractPasswordValidationHandler {
 
     @Override
-    public PasswordRequest execute(final PasswordRequest passwordRequest) {
+    public void execute(final PasswordRequest passwordRequest) {
         passwordRequest.setValid(hasAtLeastOneDigit(passwordRequest.getPassword()));
-        return passwordRequest;
     }
 
     private boolean hasAtLeastOneDigit(final String password) {

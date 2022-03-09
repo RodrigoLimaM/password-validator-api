@@ -7,9 +7,8 @@ import lombok.AllArgsConstructor;
 class WhitespaceCharacterHandler extends AbstractPasswordValidationHandler {
 
     @Override
-    public PasswordRequest execute(final PasswordRequest passwordRequest) {
+    public void execute(final PasswordRequest passwordRequest) {
         passwordRequest.setValid(hasNotWhitespaceCharacter(passwordRequest.getPassword()));
-        return passwordRequest;
     }
 
     private boolean hasNotWhitespaceCharacter(final String password) {

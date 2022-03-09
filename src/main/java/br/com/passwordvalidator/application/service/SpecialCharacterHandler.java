@@ -11,9 +11,8 @@ class SpecialCharacterHandler extends AbstractPasswordValidationHandler {
     private static final Set<Character> SPECIAL_CHARACTERS = Set.of('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+');
 
     @Override
-    public PasswordRequest execute(final PasswordRequest passwordRequest) {
+    public void execute(final PasswordRequest passwordRequest) {
         passwordRequest.setValid(hasSpecialCharacter(passwordRequest.getPassword()));
-        return passwordRequest;
     }
 
     private boolean hasSpecialCharacter(final String password) {

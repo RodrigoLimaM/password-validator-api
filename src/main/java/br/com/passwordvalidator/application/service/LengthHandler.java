@@ -7,9 +7,8 @@ import lombok.AllArgsConstructor;
 class LengthHandler extends AbstractPasswordValidationHandler {
 
     @Override
-    public PasswordRequest execute(final PasswordRequest passwordRequest) {
+    public void execute(final PasswordRequest passwordRequest) {
         passwordRequest.setValid(hasMoreThanNineCharacters(passwordRequest.getPassword()));
-        return passwordRequest;
     }
 
     private boolean hasMoreThanNineCharacters(final String password) {

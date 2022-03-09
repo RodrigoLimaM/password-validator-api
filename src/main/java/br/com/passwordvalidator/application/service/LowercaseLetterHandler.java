@@ -7,9 +7,8 @@ import lombok.AllArgsConstructor;
 class LowercaseLetterHandler extends AbstractPasswordValidationHandler {
 
     @Override
-    public PasswordRequest execute(final PasswordRequest passwordRequest) {
+    public void execute(final PasswordRequest passwordRequest) {
         passwordRequest.setValid(hasLowercaseLetter(passwordRequest.getPassword()));
-        return passwordRequest;
     }
 
     private boolean hasLowercaseLetter(final String password) {
