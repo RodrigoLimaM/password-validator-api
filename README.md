@@ -8,6 +8,24 @@ API para validações de senha. Para ser considerada uma senha válida, deve ate
 * Ao menos 1 caractere especial (!@#$%^&*()-+);
 * Não possuir caracteres repetidos dentro do conjunto;
 * Não possuir espaços em branco.
+
+Observação: é recomendado que os caracteres especiais sejam passados em sua versão codificada para evitar erros (por serem caracteres "reservados" para as URIs), conforme tabela abaixo:
+
+| Caractere | Encoded |
+|-----------|---------|
+| !         | %21     |
+| @         | %40     |
+| #         | %23     |
+| $         | %24     |
+| %         | %25     |
+| ^         | %5E     |
+| &         | %26     |
+| *         | %2A     |
+| (         | %28     |
+| )         | %29     |
+| -         | %2D     |
+| +         | %2B     |
+
 ---
 
 ## **Endpoint**
