@@ -25,7 +25,7 @@ class ValidatePasswordServiceTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"Abcdfg@1", "abcdefg@1", "ABCDEFG@1", "ABCDEFGH1", "ABCD EFGH1"})
+    @ValueSource(strings = {"Abcdfg@1", "Abcdfgh@", "abcdefg@1", "ABCDEFG@1", "ABCDEFGH1", "AAcdefg@1", "ABCD EFGH1"})
     void shouldReturnFalse_whenPasswordDoesntMeetTheRequirements(String password) {
         final boolean expected = false;
 
