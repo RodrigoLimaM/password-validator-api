@@ -27,7 +27,8 @@ class ValidatePasswordServiceTest {
             "Abcdefg(1",
             "Abcdefg)1",
             "Abcdefg-1",
-            "Abcdefg+1"})
+            "Abcdefg+1"
+    })
     void shouldReturnTrue_whenPasswordIsValid(final String password) {
         final boolean expected = true;
 
@@ -37,13 +38,15 @@ class ValidatePasswordServiceTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"Abcdfg@1",
+    @ValueSource(strings = {
+            "Abcdfg@1",
             "Abcdfgh@",
             "abcdefg@1",
             "ABCDEFG@1",
-            "ABCDEFGH1",
+            "ABCDEFGh1",
             "AAcdefg@1",
-            "ABCD EFGH1"})
+            "ABCD EFG@1"
+    })
     void shouldReturnFalse_whenPasswordDoesntMeetTheRequirements(final String password) {
         final boolean expected = false;
 
