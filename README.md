@@ -42,3 +42,6 @@ API para validações de senha. Para ser considerada uma senha válida, deve ate
 ## **Fluxograma:**
 
 ![Alt text](https://user-images.githubusercontent.com/51386403/157355440-67ff2507-2112-4c49-8a1a-ec57b83c04f3.png "Fluxograma")
+
+---
+Para rodar o projeto, clone-o na sua máquina e execute a classe: br.com.passwordvalidator.PasswordValidatorApiApplication, o serviço rodará na porta 8080.
