@@ -51,7 +51,7 @@ Observação: é recomendado que os caracteres especiais sejam passados em sua v
 ---
 ## **Arquitetura:**
 
-![Alt text](https://user-images.githubusercontent.com/51386403/157352666-c505f249-208c-426c-82ca-2ec905d51804.png "Arquitetura")
+![Alt text](https://user-images.githubusercontent.com/51386403/157382746-ae8ec16c-1c5c-4ecc-86f9-000e3f840b06.png "Arquitetura")
 * 1 - Controller conversa com a porta de entrada sem conhecer as classes que possuem as regras de negócio;
 * 2 - Service constrói a cadeia de responsabilidade e conversa com a classe abstrata responsável por definir se a senha é válida ou não;
 * 3 - Classe abstrata define métodos a serem implementados pelas classes filhas (cada uma possuirá uma regra de validação especifica dentro da cadeia) e possuí métodos em comum entre elas.
